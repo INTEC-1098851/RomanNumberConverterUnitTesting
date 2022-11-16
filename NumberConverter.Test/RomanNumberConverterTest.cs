@@ -7,7 +7,7 @@ namespace NumberConverter.Test
         {
             decimal? value = null;
             RomanNumberConverter numberConverter = new();
-            var result = numberConverter.ConvertDecimalToRoman(value);
+            var result = numberConverter.ConvertDecimalToRoman(value.ToString());
             Assert.Equal("Must enter a number", result);
         }
 
@@ -16,7 +16,7 @@ namespace NumberConverter.Test
         {
             decimal? value = 4000;
             RomanNumberConverter numberConverter = new();
-            var result = numberConverter.ConvertDecimalToRoman(value);
+            var result = numberConverter.ConvertDecimalToRoman(value.ToString());
             Assert.Equal("Must enter a number between 1 and 3999", result);
         }
 
@@ -25,7 +25,7 @@ namespace NumberConverter.Test
         {
             decimal? value = 2500;
             RomanNumberConverter numberConverter = new();
-            var result = numberConverter.ConvertDecimalToRoman(value);
+            var result = numberConverter.ConvertDecimalToRoman(value.ToString());
             Assert.NotEqual("Must enter a number between 1 and 3999", result);
         }
 
@@ -34,7 +34,7 @@ namespace NumberConverter.Test
         {
             decimal? value = 31;
             RomanNumberConverter numberConverter = new();
-            var result = numberConverter.ConvertDecimalToRoman(value);
+            var result = numberConverter.ConvertDecimalToRoman(value.ToString());
             Assert.NotEqual("XXX", result);
         }
 
@@ -43,7 +43,7 @@ namespace NumberConverter.Test
         {
             decimal? value = 5;
             RomanNumberConverter numberConverter = new();
-            var result = numberConverter.ConvertDecimalToRoman(value);
+            var result = numberConverter.ConvertDecimalToRoman(value.ToString());
             Assert.Equal("V", result);
         }
 
